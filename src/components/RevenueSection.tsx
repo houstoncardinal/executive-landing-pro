@@ -10,7 +10,7 @@ export const RevenueSection = () => {
     {
       icon: Megaphone,
       title: "IN-CONTENT ADS",
-      description: "Our writers create hilarious, integrated marketing. This is premium, unskippable inventory."
+      description: "Our writers create **hilarious, integrated marketing**. This is premium, unskippable inventory."
     },
     {
       icon: Globe,
@@ -20,16 +20,18 @@ export const RevenueSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-6 bg-black">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-4">
-            REVENUE PATH
-          </p>
-          <h2 className="font-display text-5xl md:text-7xl font-black mb-6">
-            <span className="gradient-text">WE LOVE</span>
-            <br />
-            <span className="text-foreground">COMMERCIALS.</span>
+        <div className="mb-16">
+          <div className="relative inline-block mb-8">
+            <div className="bg-primary px-12 py-6 skew-x-[-15deg]">
+              <h3 className="text-black text-2xl font-black uppercase skew-x-[15deg]">REVENUE PATH</h3>
+            </div>
+          </div>
+          
+          <h2 className="font-display text-7xl md:text-8xl font-black leading-none">
+            <span className="text-white">WE LOVE </span>
+            <span className="text-primary">COMMERCIALS.</span>
           </h2>
         </div>
         
@@ -37,25 +39,25 @@ export const RevenueSection = () => {
           {streams.map((stream, index) => (
             <div 
               key={index}
-              className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300"
+              className="bg-[#0a0a0a] border-t-4 border-primary rounded-lg p-10"
             >
-              <div className="mb-6 inline-block p-4 rounded-xl bg-primary/10">
-                <stream.icon className="w-8 h-8 text-primary" />
+              <div className="mb-8 inline-block p-6 bg-primary/20 rounded-lg">
+                <stream.icon className="w-12 h-12 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">
+              <h3 className="text-2xl font-black mb-6 text-white uppercase">
                 {stream.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {stream.description}
               </p>
             </div>
           ))}
         </div>
         
-        <div className="bg-gradient-primary rounded-2xl p-8 text-center">
-          <p className="text-white/90 text-lg mb-2">Target ARPU</p>
-          <p className="text-5xl font-black text-white">$12.00</p>
-          <p className="text-white/80 mt-2">(Hybrid Model Advantage)</p>
+        <div className="text-center">
+          <p className="text-gray-400 text-lg mb-2"><span className="text-white">**Target ARPU:**</span></p>
+          <p className="text-6xl font-black text-white mb-2">$12.00</p>
+          <p className="text-gray-400">(Hybrid Model Advantage)</p>
         </div>
       </div>
     </section>
