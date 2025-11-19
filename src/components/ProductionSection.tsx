@@ -2,45 +2,33 @@ import { MapPin, DollarSign, TrendingDown } from "lucide-react";
 
 export const ProductionSection = () => {
   return (
-    <section className="py-24 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-24 px-6 bg-black">
+      <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div>
-              <p className="text-secondary font-semibold text-sm uppercase tracking-widest mb-4">
-                PRODUCTION ADVANTAGE
-              </p>
-              <h2 className="font-display text-5xl md:text-6xl font-black text-foreground mb-6">
-                CHICAGO BASE.
-              </h2>
+          <div className="h-full"></div>
+          
+          <div className="space-y-8 text-right">
+            <div className="relative inline-block float-right">
+              <div className="border-2 border-primary px-12 py-6 skew-x-[15deg]">
+                <h3 className="text-primary text-xl font-black uppercase skew-x-[-15deg]">PRODUCTION ADVANTAGE</h3>
+              </div>
             </div>
             
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <TrendingDown className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-black text-primary mb-2">30%</h3>
-                  <p className="text-lg text-foreground/80">
-                    Guaranteed discount on production costs VS. LA/NYC.
-                  </p>
-                </div>
-              </div>
+            <div className="clear-both">
+              <h2 className="font-display text-8xl md:text-9xl font-black text-white uppercase leading-none mb-4">
+                CHICAGO<br/>
+                <span className="text-primary">BASE.</span>
+              </h2>
               
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                We leverage local talent, robust state tax incentives for massive capital efficiency and a genuine community partnership.
+              <h3 className="text-9xl font-black text-primary mb-8">30%</h3>
+              
+              <p className="text-2xl text-white font-bold mb-6">
+                Guaranteed discount on production costs vs. LA/NYC.
               </p>
-            </div>
-          </div>
-          
-          <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 p-8 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <MapPin className="w-20 h-20 mx-auto text-primary" />
-                <h3 className="text-3xl font-bold text-foreground">Chicago</h3>
-                <p className="text-muted-foreground">Strategic Production Hub</p>
-              </div>
+              
+              <p className="text-lg text-gray-400 leading-relaxed">
+                We leverage local talent, robust state tax incentives, and a genuine community partnership for massive capital efficiency.
+              </p>
             </div>
           </div>
         </div>

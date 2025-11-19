@@ -4,11 +4,6 @@ export const ModelSection = () => {
   const features = [
     {
       icon: Sparkles,
-      title: "ORIGINAL COMEDY. ONLY",
-      description: "Premium comedy content, exclusively created for TASTE"
-    },
-    {
-      icon: Users,
       title: "CURATED BY CREATORS",
       description: "Our content is selected by Emmy-nominated writers, not an algorithm. Quality over quantity."
     },
@@ -20,32 +15,40 @@ export const ModelSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-card/30">
+    <section className="py-24 px-6 bg-black">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
-            THE TASTE MODEL
-          </p>
-          <h2 className="font-display text-5xl md:text-7xl font-black gradient-text">
-            THE A24 OF COMEDY
+        <div className="mb-12">
+          <div className="relative inline-block mb-8">
+            <div className="bg-primary px-12 py-6 skew-x-[-15deg]">
+              <h3 className="text-black text-2xl font-black uppercase skew-x-[15deg]">THE TASTE MODEL</h3>
+            </div>
+          </div>
+          
+          <h2 className="font-display text-7xl md:text-8xl font-black leading-none">
+            <span className="text-white">ONLY ORIGINAL </span>
+            <span className="text-primary">COMEDY.</span>
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="space-y-6 max-w-3xl">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 group"
+              className="bg-[#0a0a0a] border-t-2 border-primary rounded-none p-10"
             >
-              <div className="mb-6 inline-block p-4 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="w-8 h-8 text-primary" />
+              <div className="flex items-start gap-6">
+                <div className="p-4 bg-primary/20">
+                  <feature.icon className="w-10 h-10 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black mb-4 text-white uppercase">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-lg">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {feature.description}
-              </p>
             </div>
           ))}
         </div>

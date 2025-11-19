@@ -1,41 +1,38 @@
 export const VisionarySection = () => {
   return (
-    <section className="py-24 px-6 bg-card/50">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 animate-fade-in">
-          <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-4">
-            THE VISIONARY
-          </p>
-          <h2 className="font-display text-5xl md:text-7xl font-black mb-6 gradient-text">
-            BASHIR SALAHUDDIN
-          </h2>
-          <p className="text-xl text-muted-foreground font-medium mb-2">
-            Award-winning Actor, Writer & Producer
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Alum. Harvard
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-lg leading-relaxed">
-            <p className="text-foreground/90">
-              Bashir launched his career as a writer on <span className="font-semibold text-foreground">Late Night with Jimmy Fallon</span> (Emmy Nominee) and went on to co-create the critically acclaimed comedies <span className="font-semibold text-foreground">South Side</span> (HBO Max) and <span className="font-semibold text-foreground">Sherman's Showcase</span> (IFC/Hulu).
-            </p>
-            <p className="text-foreground/90">
-              <span className="font-semibold text-primary">Hollywood Credibility:</span> Starred in Top Gun: Maverick (HONDO), GLOW, Bad Boys 4.
-            </p>
-          </div>
-          
-          <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-primary p-1">
-              <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🎭</div>
-                  <p className="text-sm text-muted-foreground">Emmy-Nominated Creator</p>
-                </div>
+    <section className="py-24 px-6 bg-black">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          <div className="space-y-8">
+            <div className="relative inline-block">
+              <div className="bg-primary px-12 py-6 skew-x-[-15deg]">
+                <h3 className="text-black text-2xl font-black uppercase skew-x-[15deg]">THE VISIONARY</h3>
               </div>
             </div>
+            
+            <h1 className="font-display text-7xl md:text-8xl font-black text-white uppercase leading-none">
+              BASHIR<br />SALAHUDDIN
+            </h1>
+            
+            <div className="space-y-4">
+              <p className="text-xl text-white font-bold">
+                Award-winning Actor, Writer & Producer.<br/>Harvard Alum.
+              </p>
+              
+              <p className="text-lg text-gray-400 leading-relaxed">
+                Bashir launched his career as a writer on <span className="text-white font-semibold">**Late Night with Jimmy Fallon**</span> (Emmy Nominee) and went on to co-create the critically acclaimed comedies <span className="text-white font-semibold">**South Side (HBO Max)**</span> and <span className="text-white font-semibold">**Sherman's Showcase (IFC/Hulu)**</span>.
+              </p>
+              
+              <div className="border-l-4 border-primary pl-6 py-2">
+                <p className="text-lg text-gray-300">
+                  <span className="text-white font-bold">Hollywood Credibility:</span> Starred in Top Gun: Maverick (HONDO), GLOW, Bad Boys 4.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative bg-[#C5B4A8] rounded-2xl flex items-center justify-center min-h-[600px]">
+            <div className="text-9xl font-black text-[#9D8A7A] opacity-40">0 × 4</div>
           </div>
         </div>
       </div>
