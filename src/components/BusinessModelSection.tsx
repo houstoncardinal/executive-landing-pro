@@ -23,10 +23,10 @@ export const BusinessModelSection = () => {
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-orange-950/40 to-gray-900/40 border border-primary/30 rounded-lg p-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-primary/20 border border-primary/40 rounded-lg flex items-center justify-center">
-                  <span className="text-primary text-xl">⚡</span>
+                <div className="w-10 h-10 bg-primary/20 border-2 border-primary/60 rounded flex items-center justify-center">
+                  <div className="w-4 h-4 bg-primary rotate-45 rounded-sm" />
                 </div>
-                <h3 className="text-white font-black text-xl uppercase">CREATOR OWNERSHIP</h3>
+                <h3 className="text-white font-black text-xl uppercase tracking-wider">Creator Ownership</h3>
               </div>
               
               {/* Comparison Bars */}
@@ -65,10 +65,15 @@ export const BusinessModelSection = () => {
             {/* Chicago Advantage */}
             <div className="bg-gradient-to-br from-gray-900/60 to-gray-950/60 border border-gray-700/40 rounded-lg p-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gray-700/30 border border-gray-600/40 rounded-lg flex items-center justify-center">
-                  <span className="text-orange-400 text-xl">🏗️</span>
+                <div className="w-10 h-10 bg-gray-700/30 border-2 border-gray-500/60 rounded flex items-center justify-center">
+                  <div className="grid grid-cols-2 gap-0.5 w-5 h-5">
+                    <div className="bg-orange-400 rounded-sm" />
+                    <div className="bg-orange-400/50 rounded-sm" />
+                    <div className="bg-orange-400/50 rounded-sm" />
+                    <div className="bg-orange-400 rounded-sm" />
+                  </div>
                 </div>
-                <h3 className="text-white font-black text-xl uppercase">PRODUCTION EDGE</h3>
+                <h3 className="text-white font-black text-xl uppercase tracking-wider">Production Edge</h3>
               </div>
               
               <div className="grid grid-cols-2 gap-4">
@@ -93,10 +98,14 @@ export const BusinessModelSection = () => {
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-gray-900/60 to-gray-950/60 border border-gray-700/40 rounded-lg p-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gray-700/30 border border-gray-600/40 rounded-lg flex items-center justify-center">
-                  <span className="text-green-400 text-xl">💰</span>
+                <div className="w-10 h-10 bg-gray-700/30 border-2 border-gray-500/60 rounded flex items-center justify-center">
+                  <div className="flex flex-col gap-0.5">
+                    <div className="w-5 h-1 bg-green-400 rounded-full" />
+                    <div className="w-4 h-1 bg-green-400/70 rounded-full" />
+                    <div className="w-3 h-1 bg-green-400/50 rounded-full" />
+                  </div>
                 </div>
-                <h3 className="text-white font-black text-xl uppercase">REVENUE STREAMS</h3>
+                <h3 className="text-white font-black text-xl uppercase tracking-wider">Revenue Streams</h3>
               </div>
               
               <div className="space-y-3">

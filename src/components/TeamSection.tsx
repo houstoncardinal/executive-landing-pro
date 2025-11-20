@@ -91,24 +91,29 @@ export const TeamSection = () => {
         <div className="text-center mt-6 pt-4 border-t border-red-500/10">
           <div className="inline-flex items-center gap-6">
             <div className="text-center">
-              <div className="w-10 h-10 bg-primary/10 border border-primary/30 rounded-full mx-auto mb-1 flex items-center justify-center">
-                <span className="text-primary font-black text-sm">🏆</span>
+              <div className="w-10 h-10 bg-primary/10 border-2 border-primary/40 rounded mx-auto mb-1 flex items-center justify-center">
+                <div className="w-5 h-5 bg-primary rotate-45 rounded-sm" />
               </div>
-              <p className="text-primary font-bold text-xs uppercase tracking-wide">Emmy Winner</p>
+              <p className="text-primary font-bold text-xs uppercase tracking-wider">Emmy Winner</p>
             </div>
 
             <div className="text-center">
-              <div className="w-10 h-10 bg-red-500/10 border border-red-500/30 rounded-full mx-auto mb-1 flex items-center justify-center">
-                <span className="text-red-400 font-black text-sm">🎬</span>
+              <div className="w-10 h-10 bg-red-500/10 border-2 border-red-500/40 rounded mx-auto mb-1 flex items-center justify-center">
+                <div className="w-5 h-4 border-2 border-red-400" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)' }} />
               </div>
-              <p className="text-red-400 font-bold text-xs uppercase tracking-wide">Award Director</p>
+              <p className="text-red-400 font-bold text-xs uppercase tracking-wider">Award Director</p>
             </div>
 
             <div className="text-center">
-              <div className="w-10 h-10 bg-orange-500/10 border border-orange-500/30 rounded-full mx-auto mb-1 flex items-center justify-center">
-                <span className="text-orange-400 font-black text-sm">💼</span>
+              <div className="w-10 h-10 bg-orange-500/10 border-2 border-orange-500/40 rounded mx-auto mb-1 flex items-center justify-center">
+                <div className="grid grid-cols-2 gap-0.5 w-4 h-4">
+                  <div className="bg-orange-400 rounded-sm" />
+                  <div className="bg-orange-400/60 rounded-sm" />
+                  <div className="bg-orange-400/60 rounded-sm" />
+                  <div className="bg-orange-400 rounded-sm" />
+                </div>
               </div>
-              <p className="text-orange-400 font-bold text-xs uppercase tracking-wide">Industry Veteran</p>
+              <p className="text-orange-400 font-bold text-xs uppercase tracking-wider">Industry Veteran</p>
             </div>
           </div>
         </div>

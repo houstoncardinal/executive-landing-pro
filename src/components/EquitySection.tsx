@@ -41,8 +41,8 @@ export const EquitySection = () => {
         </div>
         
         <div className="text-left">
-          <p className="text-2xl md:text-3xl text-gray-400">
-            <span className="text-white">We are building the A24 of Comedy</span> — creator-focused, quality-first, and profit-sharing from the start.
+          <p className="text-2xl md:text-3xl text-gray-400 leading-relaxed">
+            <span className="text-white">Creator-focused, quality-first</span> — substantial participation and profit-sharing from the start.
           </p>
         </div>
       </div>
