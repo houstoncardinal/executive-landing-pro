@@ -26,8 +26,8 @@ export const ComedyDNASection = () => {
           
           <div className="space-y-8">
             <h2 className="font-display text-7xl md:text-8xl font-black leading-none">
-              <span className="text-white">COMEDY. </span>
-              <span className="text-primary">NOT DRAMEDY.</span>
+              <span className="text-white">CREATOR </span>
+              <span className="text-primary">POWERED</span>
             </h2>
             
             <p className="text-2xl text-gray-400 font-medium">

@@ -11,7 +11,7 @@ const teamMembers = [
   },
   {
     name: "DIALLO RIDDLE",
-    role: "Content Curator · Sherman’s Showcase co-creator",
+    role: "Content Curator · Sherman's Showcase co-creator",
     image: "/diallo-riddle.png",
   },
   {
@@ -21,7 +21,7 @@ const teamMembers = [
   },
   {
     name: "CHANDRA RUSSELL",
-    role: "Director / Writer · Sherman’s Showcase & South Side",
+    role: "Director / Writer · Sherman's Showcase & South Side",
     image: "/chandra-russell.png",
   },
   {
@@ -38,10 +38,10 @@ export const TeamSection = () => {
     <section className="-mt-20 py-16 px-6 bg-black">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-10">
-          <h2 className="text-5xl md:text-6xl font-black text-center mb-3 uppercase">
+          <h2 className="text-5xl md:text-6xl font-black text-center mb-3 uppercase text-white">
             THE <span className="text-primary">DREAM TEAM</span> OF COMEDY
           </h2>
-          <p className="text-center text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
+          <p className="text-center text-gray-300 max-w-2xl mx-auto text-sm leading-relaxed">
             Creator-first leadership, seasoned writers, directors, and producers who have proven they can build shows that audiences love.
           </p>
         </div>

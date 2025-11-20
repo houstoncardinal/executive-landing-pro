@@ -45,7 +45,7 @@ const roadmapSignals = [
 
 export const RoadmapSection = () => {
   return (
-    <section className="relative py-24 md:py-32 px-6 bg-gradient-to-b from-black via-slate-900 to-black overflow-hidden">
+    <section className="relative py-24 md:py-32 px-6 bg-black overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(244,85,37,0.12),_transparent_65%)]" />
         <div className="absolute -top-4 right-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px]" />
