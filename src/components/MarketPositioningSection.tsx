@@ -13,7 +13,7 @@ export const MarketPositioningSection = () => {
             </h2>
           </div>
           <p className="text-primary text-lg font-bold uppercase tracking-wide">
-            Curated Like A24. Built Like A Studio.
+            Curated Excellence. Studio Precision.
           </p>
         </div>
 
@@ -26,8 +26,8 @@ export const MarketPositioningSection = () => {
             {/* Short Form */}
             <div className="bg-gradient-to-r from-red-950/30 to-gray-900/30 border-l-4 border-red-500 rounded p-4">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-red-400 text-lg">📱</span>
+                <div className="w-8 h-8 bg-red-500/20 border border-red-500/40 rounded flex items-center justify-center flex-shrink-0">
+                  <div className="w-3 h-4 border-2 border-red-400 rounded-sm" />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-red-300 font-bold text-base uppercase mb-1">Short-Form Viral</h4>
@@ -39,8 +39,11 @@ export const MarketPositioningSection = () => {
             {/* Prestige */}
             <div className="bg-gradient-to-r from-blue-950/30 to-gray-900/30 border-l-4 border-blue-500 rounded p-4">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-blue-400 text-lg">🎭</span>
+                <div className="w-8 h-8 bg-blue-500/20 border border-blue-500/40 rounded flex items-center justify-center flex-shrink-0">
+                  <div className="flex gap-0.5">
+                    <div className="w-2 h-4 bg-blue-400 rounded-full" />
+                    <div className="w-2 h-4 bg-blue-400/60 rounded-full" />
+                  </div>
                 </div>
                 <div className="flex-1">
                   <h4 className="text-blue-300 font-bold text-base uppercase mb-1">Prestige Drama</h4>
@@ -52,8 +55,11 @@ export const MarketPositioningSection = () => {
             {/* TASTE Sweet Spot */}
             <div className="bg-gradient-to-r from-primary/20 to-orange-500/20 border-2 border-primary rounded p-5">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 bg-primary/20 border border-primary/40 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary text-xl font-black">🎯</span>
+                <div className="w-10 h-10 bg-primary/20 border-2 border-primary/60 rounded flex items-center justify-center flex-shrink-0">
+                  <div className="relative w-5 h-5">
+                    <div className="absolute inset-0 border-2 border-primary rounded-full" />
+                    <div className="absolute inset-1.5 bg-primary rounded-full" />
+                  </div>
                 </div>
                 <div className="flex-1">
                   <h4 className="text-primary font-black text-lg uppercase mb-1">TASTE: Sweet Spot</h4>
@@ -67,14 +73,14 @@ export const MarketPositioningSection = () => {
           <div className="space-y-4">
             <h3 className="text-white font-black text-2xl uppercase mb-6">Proven Models</h3>
             
-            {/* A24 */}
+            {/* Indie Film Model */}
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-600/40 rounded-lg p-4">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-purple-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xs font-black">A24</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-purple-500 rounded flex items-center justify-center">
+                  <div className="w-5 h-5 border-2 border-white rounded-sm rotate-12" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-white font-bold text-base uppercase">Film Model</h4>
+                  <h4 className="text-white font-bold text-base uppercase tracking-wide">Indie Film Model</h4>
                   <p className="text-gray-400 text-xs">Artist-led, cultural impact</p>
                 </div>
               </div>
@@ -93,8 +99,11 @@ export const MarketPositioningSection = () => {
             {/* Crunchyroll */}
             <div className="bg-gradient-to-br from-orange-950/40 to-gray-900/40 border border-orange-500/30 rounded-lg p-4">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xs font-black">CR</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded flex items-center justify-center">
+                  <div className="relative w-5 h-5">
+                    <div className="absolute inset-0 border-2 border-white rounded-full" />
+                    <div className="absolute inset-0 bg-white clip-path-[polygon(50%_0,100%_50%,50%_100%,50%_0)]" style={{ clipPath: 'polygon(50% 0, 100% 50%, 50% 100%)' }} />
+                  </div>
                 </div>
                 <div className="flex-1">
                   <h4 className="text-white font-bold text-base uppercase">Anime Niche</h4>
@@ -116,8 +125,8 @@ export const MarketPositioningSection = () => {
             {/* Shudder */}
             <div className="bg-gradient-to-br from-green-950/40 to-gray-900/40 border border-green-500/30 rounded-lg p-4">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-lg">🎬</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded flex items-center justify-center">
+                  <div className="w-4 h-4 border-2 border-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)' }} />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-white font-bold text-base uppercase">Horror Focus</h4>
@@ -145,22 +154,29 @@ export const MarketPositioningSection = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 border border-primary/40 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-primary text-xl">🎯</span>
+              <div className="w-12 h-12 bg-primary/20 border-2 border-primary/50 rounded mx-auto mb-3 flex items-center justify-center">
+                <div className="relative w-6 h-6">
+                  <div className="absolute inset-0 border-2 border-primary rounded-full" />
+                  <div className="absolute inset-2 bg-primary rounded-full" />
+                </div>
               </div>
-              <p className="text-white font-bold text-sm">Algorithm-Free</p>
+              <p className="text-white font-bold text-sm tracking-wide">Algorithm-Free</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 border border-primary/40 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-primary text-xl">🎬</span>
+              <div className="w-12 h-12 bg-primary/20 border-2 border-primary/50 rounded mx-auto mb-3 flex items-center justify-center">
+                <div className="flex gap-0.5">
+                  <div className="w-1.5 h-6 bg-primary rounded-full" />
+                  <div className="w-1.5 h-5 bg-primary/70 rounded-full mt-1" />
+                  <div className="w-1.5 h-6 bg-primary rounded-full" />
+                </div>
               </div>
-              <p className="text-white font-bold text-sm">Audience-Building</p>
+              <p className="text-white font-bold text-sm tracking-wide">Audience-Building</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-primary/20 border border-primary/40 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-primary text-xl">🏆</span>
+              <div className="w-12 h-12 bg-primary/20 border-2 border-primary/50 rounded mx-auto mb-3 flex items-center justify-center">
+                <div className="w-6 h-6 bg-primary rotate-45 rounded-sm" />
               </div>
-              <p className="text-white font-bold text-sm">Culturally Authentic</p>
+              <p className="text-white font-bold text-sm tracking-wide">Culturally Authentic</p>
             </div>
           </div>
         </div>
