@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/contexts/theme-context";
 import Index from "./pages/Index";
 import StreamPage from "./pages/Stream";
 import Branding from "./pages/Branding";
+import Pitch from "./pages/Pitch";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/stream" element={<StreamPage />} />
           <Route path="/branding" element={<Branding />} />
+          <Route path="/pitch" element={<Pitch />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
