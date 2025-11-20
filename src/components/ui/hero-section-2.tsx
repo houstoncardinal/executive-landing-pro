@@ -2,7 +2,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatedGroup } from "./animated-group";
 import { ColorSwitcher } from "@/components/ColorSwitcher";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const transitionVariants = {
   item: {
@@ -57,7 +56,6 @@ export function HeroSection() {
           {/* Color switcher positioned elegantly */}
           <div className="absolute right-6 top-6 z-20 flex items-center gap-3">
             <ColorSwitcher />
-            <ThemeToggle />
           </div>
 
           {/* Main cinematic headline */}
