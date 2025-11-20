@@ -1,7 +1,10 @@
 import { HeroSection } from "@/components/HeroSection";
 import { VisionarySection } from "@/components/VisionarySection";
-import { OpportunitySection } from "@/components/OpportunitySection";
+import { CulturalMomentSection } from "@/components/CulturalMomentSection";
 import { ModelSection } from "@/components/ModelSection";
+import { BusinessModelSection } from "@/components/BusinessModelSection";
+import { MarketPositioningSection } from "@/components/MarketPositioningSection";
+import { RoadmapSection } from "@/components/RoadmapSection";
 import { TeamSection } from "@/components/TeamSection";
 import { EquitySection } from "@/components/EquitySection";
 import { ProductionSection } from "@/components/ProductionSection";
@@ -9,21 +12,28 @@ import { ComedyDNASection } from "@/components/ComedyDNASection";
 import { RevenueSection } from "@/components/RevenueSection";
 import { FundingSection } from "@/components/FundingSection";
 import { CTASection } from "@/components/CTASection";
+import { ScrollProgressBar } from "@/components/ui/scroll-progress";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
       <VisionarySection />
-      <OpportunitySection />
-      <ModelSection />
+      <CulturalMomentSection />
       <TeamSection />
+      <ModelSection />
+      <BusinessModelSection />
+      <MarketPositioningSection />
+      <RoadmapSection />
       <EquitySection />
       <ProductionSection />
       <ComedyDNASection />
       <RevenueSection />
       <FundingSection />
       <CTASection />
+
+      {/* Global scroll progress indicator */}
+      <ScrollProgressBar />
     </div>
   );
 };

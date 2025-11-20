@@ -14,8 +14,8 @@ export const EquitySection = () => {
           </p>
         </div>
         
-        <div className="space-y-6 max-w-2xl mb-12">
-          <div className="bg-[#1a1a1a] border border-gray-800 rounded-none p-10">
+        <div className="flex flex-col md:flex-row gap-6 mb-12">
+          <div className="bg-[#1a1a1a] border border-gray-800 rounded-none p-10 flex-1">
             <h3 className="text-3xl font-black text-white mb-4 uppercase">
               TRADITIONAL STREAMER
             </h3>
@@ -26,8 +26,8 @@ export const EquitySection = () => {
               Writers get minimal back-end ownership.
             </p>
           </div>
-          
-          <div className="bg-gradient-to-br from-[#3d2618] to-[#1a1a1a] border-2 border-primary rounded-none p-10">
+
+          <div className="bg-gradient-to-br from-[#3d2618] to-[#1a1a1a] border-2 border-primary rounded-none p-10 flex-1">
             <h3 className="text-3xl font-black text-white mb-4 uppercase">
               THE TASTE MODEL
             </h3>
@@ -42,7 +42,7 @@ export const EquitySection = () => {
         
         <div className="text-left">
           <p className="text-2xl md:text-3xl text-gray-400">
-            <span className="text-white">**We are building the **A24 of Comedy**</span> — creator-focused, quality-first, and profit-sharing from the start.<span className="text-white">**</span>
+            <span className="text-white">We are building the A24 of Comedy</span> — creator-focused, quality-first, and profit-sharing from the start.
           </p>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const RevenueSection = () => {
     {
       icon: Megaphone,
       title: "IN-CONTENT ADS",
-      description: "Our writers create **hilarious, integrated marketing**. This is premium, unskippable inventory."
+      description: "Our writers create hilarious, integrated marketing. This is premium, unskippable inventory."
     },
     {
       icon: Globe,
@@ -55,7 +55,7 @@ export const RevenueSection = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-gray-400 text-lg mb-2"><span className="text-white">**Target ARPU:**</span></p>
+          <p className="text-gray-400 text-lg mb-2"><span className="text-white">Target ARPU:</span></p>
           <p className="text-6xl font-black text-white mb-2">$12.00</p>
           <p className="text-gray-400">(Hybrid Model Advantage)</p>
         </div>

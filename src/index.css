@@ -50,6 +50,42 @@ All colors MUST be HSL.
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  [data-theme="light"] {
+    --background: 0 0% 98%;
+    --foreground: 225 8% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 5%;
+
+    --muted: 210 10% 80%;
+    --muted-foreground: 210 10% 30%;
+
+    --border: 210 16% 65%;
+    --input: 210 18% 92%;
+    --ring: 14 90% 55%;
+  }
+
+  [data-theme="dark"] {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 14 90% 55%;
+  }
 }
 
 @layer utilities {

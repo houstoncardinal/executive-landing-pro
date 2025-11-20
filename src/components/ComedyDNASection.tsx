@@ -1,17 +1,27 @@
-import { Laugh } from "lucide-react";
-
 export const ComedyDNASection = () => {
+  const dnaImages = [
+    { src: "/toastmockup.png", caption: "Creator-first DNA" },
+    { src: "/toastmockup2.png", caption: "Comedy, not dramedy" },
+  ];
+
   return (
     <section className="py-24 px-6 bg-black">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="bg-[#CCCCCC] aspect-[3/2] rounded-lg flex items-center justify-center">
-              <span className="text-[#999] text-8xl font-bold">600 × 400</span>
-            </div>
-            <div className="bg-[#CCCCCC] aspect-[3/2] rounded-lg flex items-center justify-center">
-              <span className="text-[#999] text-8xl font-bold">600 × 400</span>
-            </div>
+            {dnaImages.map((dna) => (
+              <div key={dna.src} className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-white/10">
+                <img
+                  src={dna.src}
+                  alt={dna.caption}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                <p className="absolute inset-x-6 bottom-6 text-sm font-semibold uppercase tracking-[0.3em] text-white">
+                  {dna.caption}
+                </p>
+              </div>
+            ))}
           </div>
           
           <div className="space-y-8">
