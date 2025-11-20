@@ -404,14 +404,6 @@ export const CulturalMomentSection = () => {
               </div>
             </div>
 
-            <div className="mt-8">
-              <div className="rounded-3xl border border-orange-500/30 bg-gradient-to-br from-orange-500/10 to-transparent p-6 shadow-[0_25px_70px_rgba(0,0,0,0.25)]">
-                <p className="text-sm uppercase tracking-[0.4em] text-orange-300 mb-3">Taste Philosophy</p>
-                <p className="text-white/80 text-base leading-relaxed">
-                  Creator-led, taste-forward, and business-ready. We do what great comedy needs, not what algorithms demand.
-                </p>
-              </div>
-            </div>
           </div>
 
         </div>
