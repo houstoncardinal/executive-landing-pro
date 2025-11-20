@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Palette, Type, Eye, Download, Copy, Check, Settings, Sparkles, Zap, Crown, Heart, Star, Briefcase, Target, TrendingUp, Award, Globe } from 'lucide-react';
+import { ChevronDown, Palette, Type, Download, Copy, Check, Settings, Sparkles, Zap, Crown, Heart, Star, Briefcase, Target, TrendingUp, Award, Globe, Layers, Wrench, BarChart3, Users, Building, Lightbulb, Shuffle, Plus, Minus, RotateCcw, Save, Upload, Share2 } from 'lucide-react';
 
 // Enterprise-Level Color Palettes - Comedy Industry Excellence
 const colorPalettes = [
@@ -369,7 +369,7 @@ export const useBrandingTheme = () => {
   return { currentTheme, updateTheme };
 };
 
-// Enterprise Color Palette Card Component
+// Enterprise Color Palette Card Component - Professional Corporate Design
 const ColorPaletteCard = ({
   palette,
   isSelected,
@@ -391,128 +391,126 @@ const ColorPaletteCard = ({
   return (
     <div
       onClick={() => onSelect(palette)}
-      className={`group relative p-8 rounded-2xl cursor-pointer transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] border ${
+      className={`group relative bg-white rounded-2xl cursor-pointer transition-all duration-300 hover:shadow-2xl border-2 ${
         isSelected
-          ? 'ring-2 ring-primary ring-opacity-50 shadow-2xl scale-[1.02] border-primary bg-gradient-to-br from-primary/5 to-accent/5'
-          : 'hover:shadow-xl border-gray-200 bg-white hover:border-primary/30'
+          ? 'ring-4 ring-primary/20 shadow-2xl border-primary/50 bg-gradient-to-br from-primary/5 to-accent/5'
+          : 'hover:shadow-xl border-gray-200 hover:border-primary/30'
       }`}
     >
       {/* Selection indicator */}
       {isSelected && (
-        <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg z-10">
-          <Check className="w-5 h-5 text-white" />
+        <div className="absolute -top-4 -right-4 w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-xl z-20 border-4 border-white">
+          <Check className="w-6 h-6 text-white" />
         </div>
       )}
 
-      {/* Category badge */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-3">
-          <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
-            palette.category === 'Leadership' ? 'bg-yellow-100 text-yellow-800' :
-            palette.category === 'Creative' ? 'bg-red-100 text-red-800' :
-            palette.category === 'Technology' ? 'bg-blue-100 text-blue-800' :
-            palette.category === 'Premium' ? 'bg-gray-100 text-gray-800' :
-            palette.category === 'Modern' ? 'bg-green-100 text-green-800' :
-            palette.category === 'Heritage' ? 'bg-purple-100 text-purple-800' :
-            palette.category === 'Evening' ? 'bg-indigo-100 text-indigo-800' :
-            palette.category === 'Established' ? 'bg-red-100 text-red-900' :
-            palette.category === 'Digital' ? 'bg-teal-100 text-teal-800' :
-            palette.category === 'Visionary' ? 'bg-violet-100 text-violet-800' :
-            palette.category === 'Elite' ? 'bg-emerald-100 text-emerald-800' :
-            'bg-orange-100 text-orange-800'
-          }`}>
-            {palette.category}
+      {/* Professional header */}
+      <div className="p-8 pb-6">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2 leading-tight">{palette.name}</h3>
+            <div className="flex items-center gap-3 mb-3">
+              <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                palette.category === 'Leadership' ? 'bg-amber-100 text-amber-800' :
+                palette.category === 'Creative' ? 'bg-red-100 text-red-800' :
+                palette.category === 'Technology' ? 'bg-blue-100 text-blue-800' :
+                palette.category === 'Premium' ? 'bg-slate-100 text-slate-800' :
+                palette.category === 'Modern' ? 'bg-emerald-100 text-emerald-800' :
+                palette.category === 'Heritage' ? 'bg-purple-100 text-purple-800' :
+                palette.category === 'Evening' ? 'bg-indigo-100 text-indigo-800' :
+                palette.category === 'Established' ? 'bg-red-100 text-red-900' :
+                palette.category === 'Digital' ? 'bg-teal-100 text-teal-800' :
+                palette.category === 'Visionary' ? 'bg-violet-100 text-violet-800' :
+                palette.category === 'Elite' ? 'bg-emerald-100 text-emerald-800' :
+                'bg-orange-100 text-orange-800'
+              }`}>
+                {palette.category}
+              </span>
+              <span className="text-sm text-gray-500 font-medium">{palette.industry}</span>
+            </div>
           </div>
-          <span className="text-xs text-gray-500 font-medium uppercase tracking-wide">
-            {palette.industry}
-          </span>
         </div>
-      </div>
 
-      {/* Header */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">{palette.name}</h3>
-        <p className="text-sm text-gray-600 leading-relaxed">{palette.description}</p>
-      </div>
+        <p className="text-gray-600 text-sm leading-relaxed mb-6">{palette.description}</p>
 
-      {/* Color palette preview */}
-      <div className="relative mb-6">
-        <div
-          className="h-24 rounded-xl shadow-inner border border-gray-200 relative overflow-hidden"
-          style={{ background: palette.gradient }}
-        >
-          <div className="absolute inset-0 bg-black/10"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex space-x-2">
-              {palette.colors.map((color, index) => (
+        {/* Professional color swatches - Large and organized */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wider">Color Palette</h4>
+          <div className="grid grid-cols-5 gap-3">
+            {palette.colors.map((color, index) => (
+              <div key={index} className="text-center group/color">
                 <div
-                  key={index}
                   onClick={(e) => copyColor(color.hex, e)}
-                  className="w-10 h-10 rounded-lg border-3 border-white shadow-lg transform hover:scale-125 transition-all duration-300 cursor-pointer group/tooltip relative"
+                  className="relative w-full h-20 rounded-xl border-2 border-gray-200 shadow-md cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-200 overflow-hidden"
                   style={{ backgroundColor: color.hex }}
                 >
-                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity font-mono whitespace-nowrap z-50">
-                    {color.name}
-                    <br />
-                    {color.hex}
+                  {/* Subtle overlay for better text contrast */}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/color:opacity-100 transition-opacity duration-200" />
+
+                  {/* Color info on hover */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover/color:opacity-100 transition-opacity duration-200">
+                    <span className="text-white text-xs font-bold drop-shadow-lg">{color.name}</span>
+                    <span className="text-white/90 text-xs font-mono drop-shadow-lg mt-1">{color.hex}</span>
                   </div>
+
+                  {/* Copy feedback */}
                   {copiedColor === color.hex && (
-                    <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-xs px-3 py-2 rounded-lg font-bold z-50">
-                      Copied!
+                    <div className="absolute inset-0 bg-green-500/90 flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">Copied!</span>
                     </div>
                   )}
                 </div>
-              ))}
+                <div className="mt-2">
+                  <p className="text-xs font-semibold text-gray-700 capitalize">{color.role}</p>
+                  <p className="text-xs text-gray-500 font-mono">{color.hex}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Professional metadata */}
+        <div className="mt-6 pt-6 border-t border-gray-100">
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span className="font-semibold text-gray-600 uppercase tracking-wider text-xs">Psychology</span>
+              <p className="text-gray-800 font-medium mt-1">{palette.psychology}</p>
+            </div>
+            <div>
+              <span className="font-semibold text-gray-600 uppercase tracking-wider text-xs">Mood</span>
+              <span className={`font-bold mt-1 px-2 py-1 rounded-full text-xs inline-block ${
+                palette.mood.includes('Executive') ? 'bg-amber-100 text-amber-800' :
+                palette.mood.includes('Creative') ? 'bg-red-100 text-red-800' :
+                palette.mood.includes('Innovative') ? 'bg-blue-100 text-blue-800' :
+                palette.mood.includes('Luxury') ? 'bg-slate-100 text-slate-800' :
+                palette.mood.includes('Fresh') ? 'bg-emerald-100 text-emerald-800' :
+                palette.mood.includes('Majestic') ? 'bg-purple-100 text-purple-800' :
+                palette.mood.includes('Sophisticated') ? 'bg-indigo-100 text-indigo-800' :
+                palette.mood.includes('Rich') ? 'bg-red-100 text-red-900' :
+                palette.mood.includes('Modern') ? 'bg-teal-100 text-teal-800' :
+                palette.mood.includes('Visionary') ? 'bg-violet-100 text-violet-800' :
+                palette.mood.includes('Exclusive') ? 'bg-emerald-100 text-emerald-800' :
+                'bg-orange-100 text-orange-800'
+              }`}>
+                {palette.mood}
+              </span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Psychology and mood */}
-      <div className="space-y-3 mb-6">
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Psychology</span>
-          <span className="text-sm text-gray-700 font-medium">{palette.psychology}</span>
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Mood</span>
-          <span className={`text-sm font-bold px-3 py-1 rounded-full ${
-            palette.mood.includes('Executive') ? 'bg-yellow-100 text-yellow-800' :
-            palette.mood.includes('Creative') ? 'bg-red-100 text-red-800' :
-            palette.mood.includes('Innovative') ? 'bg-blue-100 text-blue-800' :
-            palette.mood.includes('Luxury') ? 'bg-gray-100 text-gray-800' :
-            palette.mood.includes('Fresh') ? 'bg-green-100 text-green-800' :
-            palette.mood.includes('Majestic') ? 'bg-purple-100 text-purple-800' :
-            palette.mood.includes('Sophisticated') ? 'bg-indigo-100 text-indigo-800' :
-            palette.mood.includes('Rich') ? 'bg-red-100 text-red-900' :
-            palette.mood.includes('Modern') ? 'bg-teal-100 text-teal-800' :
-            palette.mood.includes('Visionary') ? 'bg-violet-100 text-violet-800' :
-            palette.mood.includes('Exclusive') ? 'bg-emerald-100 text-emerald-800' :
-            'bg-orange-100 text-orange-800'
-          }`}>
-            {palette.mood}
-          </span>
-        </div>
-      </div>
-
-      {/* Color codes grid */}
-      <div className="grid grid-cols-5 gap-2">
-        {palette.colors.map((color, index) => (
-          <div key={index} className="text-center">
-            <div
-              className="w-full h-10 rounded-lg border-2 border-gray-200 shadow-sm cursor-pointer hover:scale-105 transition-transform"
-              style={{ backgroundColor: color.hex }}
-              onClick={(e) => copyColor(color.hex, e)}
-            />
-            <p className="text-xs text-gray-500 font-mono mt-1 truncate" title={color.hex}>
-              {color.hex}
-            </p>
+      {/* Professional gradient preview */}
+      <div className="px-8 pb-8">
+        <div className="relative h-16 rounded-xl overflow-hidden shadow-inner border border-gray-200" style={{ background: palette.gradient }}>
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-white text-sm font-bold drop-shadow-lg">Preview</span>
           </div>
-        ))}
+        </div>
       </div>
 
-      {/* Hover effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 to-accent/3 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      {/* Subtle hover effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/2 to-accent/2 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
     </div>
   );
 };
@@ -744,7 +742,6 @@ export const Branding = () => {
                 { id: 'overview', label: 'Brand Overview', icon: Crown, color: 'from-amber-500 to-yellow-600', desc: 'System overview' },
                 { id: 'colors', label: 'Color Palettes', icon: Palette, color: 'from-blue-500 to-indigo-600', desc: 'Psychology-based colors' },
                 { id: 'typography', label: 'Typography', icon: Type, color: 'from-emerald-500 to-teal-600', desc: 'Premium fonts' },
-                { id: 'preview', label: 'Live Preview', icon: Eye, color: 'from-purple-500 to-violet-600', desc: 'Real-time preview' },
                 { id: 'applications', label: 'Applications', icon: Target, color: 'from-rose-500 to-pink-600', desc: 'Brand usage' }
               ].map((item) => {
                 const Icon = item.icon;
@@ -934,83 +931,7 @@ export const Branding = () => {
               </div>
             )}
 
-            {/* Live Preview */}
-            {activeSection === 'preview' && (
-              <div className="space-y-8 animate-fade-in">
-                <div className="bg-white rounded-3xl shadow-xl border border-gray-200 p-10">
-                  <div className="text-center mb-12">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                      <Eye className="w-8 h-8 text-white" />
-                    </div>
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Live Brand Preview</h2>
-                    <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                      See how your selections look together in real interface components. Colors and typography update instantly when you switch options.
-                    </p>
-                  </div>
 
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="p-8 rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white shadow-inner">
-                      <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-12 h-12 rounded-xl shadow-lg" style={{ background: selectedPalette.gradient }} />
-                        <div>
-                          <p className="text-lg font-bold text-gray-900" style={{ fontFamily: selectedFont.name }}>
-                            Executive Headline
-                          </p>
-                          <p className="text-sm text-gray-600">Uses {selectedFont.name}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-bold uppercase tracking-wide text-gray-700">Buttons</h4>
-                        <div className="flex flex-wrap gap-3">
-                          <button
-                            className="px-5 py-3 rounded-xl font-semibold shadow-lg text-white"
-                            style={{ backgroundColor: selectedPalette.colors[0].hex, fontFamily: selectedFont.name }}
-                          >
-                            Primary Action
-                          </button>
-                          <button
-                            className="px-5 py-3 rounded-xl font-semibold border"
-                            style={{
-                              borderColor: selectedPalette.colors[1].hex,
-                              color: selectedPalette.colors[1].hex,
-                              fontFamily: selectedFont.name
-                            }}
-                          >
-                            Secondary
-                          </button>
-                          <button
-                            className="px-5 py-3 rounded-xl font-semibold"
-                            style={{ backgroundColor: selectedPalette.colors[2].hex, color: '#fff', fontFamily: selectedFont.name }}
-                          >
-                            Accent
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="p-8 rounded-2xl border border-gray-200 bg-white shadow-inner space-y-6">
-                      <div className="space-y-2">
-                        <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Card Title</p>
-                        <p className="text-2xl font-bold text-gray-900" style={{ fontFamily: selectedFont.name }}>
-                          Premium Streaming Experience
-                        </p>
-                        <p className="text-gray-600 leading-relaxed" style={{ fontFamily: selectedFont.name }}>
-                          Build trust with enterprise-grade color psychology and type pairings optimized for entertainment brands.
-                        </p>
-                      </div>
-                      <div className="grid grid-cols-3 gap-4">
-                        {selectedPalette.colors.map((color) => (
-                          <div key={color.hex} className="p-4 rounded-2xl border text-center space-y-2">
-                            <div className="h-10 w-full rounded-md shadow-inner" style={{ backgroundColor: color.hex }} />
-                            <p className="text-xs font-mono text-gray-600">{color.hex}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
 
             {/* Applications */}
             {activeSection === 'applications' && (
