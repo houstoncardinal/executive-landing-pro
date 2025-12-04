@@ -90,12 +90,12 @@ export function HeroSection() {
                   />
                 </div>
 
-                <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[0.9] tracking-tight max-w-4xl mx-auto">
-                  <span className="text-white font-black whitespace-nowrap">THE WORLD'S FIRST</span>
+                <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[0.9] tracking-tight max-w-5xl mx-auto">
+                  <span className="text-white font-black">THE WORLD'S FIRST</span>
                   <br />
-                  <span className="bg-gradient-to-r from-primary via-primary to-orange-400 bg-clip-text text-transparent font-black whitespace-nowrap">COMEDY-ONLY</span> <span className="text-white font-black whitespace-nowrap">STREAMING</span>
+                  <span className="bg-gradient-to-r from-primary via-primary to-orange-400 bg-clip-text text-transparent font-black">COMEDY SUPER-BRAND</span>
                   <br />
-                  <span className="text-white font-black">PLATFORM</span>
+                  <span className="text-white font-black">AND CREATOR ECOSYSTEM</span>
                 </h1>
               </div>
             </div>
