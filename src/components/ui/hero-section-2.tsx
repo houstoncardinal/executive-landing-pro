@@ -72,25 +72,25 @@ export function HeroSection() {
               ...transitionVariants,
             }}
           >
-            <div className="space-y-12 text-center mb-16">
-              <div className="space-y-6">
-                <div className="flex items-center justify-center gap-4">
-                  <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary" />
-                  <p className="text-primary font-medium uppercase tracking-[0.3em] text-sm">
+            <div className="space-y-8 md:space-y-12 text-center mb-8 md:mb-16 px-2">
+              <div className="space-y-4 md:space-y-6">
+                <div className="flex items-center justify-center gap-2 md:gap-4">
+                  <div className="h-px w-8 md:w-12 bg-gradient-to-r from-transparent to-primary" />
+                  <p className="text-primary font-medium uppercase tracking-[0.15em] md:tracking-[0.3em] text-xs md:text-sm">
                     WHERE COMEDY FINALLY LIVES
                   </p>
                 </div>
 
                 {/* Taste Logo */}
-                <div className="mb-4">
+                <div className="mb-2 md:mb-4">
                   <img
                     src="/logo.png"
                     alt="Taste Logo"
-                    className="h-56 w-auto mx-auto opacity-95"
+                    className="h-24 sm:h-32 md:h-40 lg:h-56 w-auto mx-auto opacity-95"
                   />
                 </div>
 
-                <h1 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[0.9] tracking-tight max-w-5xl mx-auto">
+                <h1 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-[1.1] md:leading-[0.9] tracking-tight max-w-5xl mx-auto px-2">
                   <span className="text-white font-black">THE WORLD'S FIRST</span>
                   <br />
                   <span className="bg-gradient-to-r from-primary via-primary to-orange-400 bg-clip-text text-transparent font-black">COMEDY SUPER-BRAND</span>
@@ -115,16 +115,16 @@ export function HeroSection() {
               ...transitionVariants,
             }}
           >
-            <div className="relative w-full max-w-6xl mx-auto px-6">
+            <div className="relative w-full max-w-6xl mx-auto px-2 md:px-6">
               <div className="relative group">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-[3rem] blur-xl opacity-75 group-hover:opacity-100 transition-all duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-2xl md:rounded-[3rem] blur-xl opacity-75 group-hover:opacity-100 transition-all duration-700" />
 
-                <div className="relative overflow-hidden rounded-[3rem] border border-primary/20 bg-gradient-to-br from-black/80 to-black/40 backdrop-blur-sm">
+                <div className="relative overflow-hidden rounded-2xl md:rounded-[3rem] border border-primary/20 bg-gradient-to-br from-black/80 to-black/40 backdrop-blur-sm">
                   <img
                     src="/screen.png"
                     alt="Taste streaming dashboard"
-                    className="h-full min-h-[600px] lg:min-h-[700px] w-full object-cover opacity-90"
+                    className="h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[700px] w-full object-cover opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
