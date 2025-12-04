@@ -8,7 +8,6 @@ import { RoadmapSection } from "@/components/RoadmapSection";
 import { TeamSection } from "@/components/TeamSection";
 import { EquitySection } from "@/components/EquitySection";
 import { ProductionSection } from "@/components/ProductionSection";
-import { ComedyDNASection } from "@/components/ComedyDNASection";
 import { RevenueSection } from "@/components/RevenueSection";
 import { FundingSection } from "@/components/FundingSection";
 import { CTASection } from "@/components/CTASection";
@@ -27,7 +26,6 @@ const Index = () => {
       <RoadmapSection />
       <EquitySection />
       <ProductionSection />
-      <ComedyDNASection />
       <RevenueSection />
       <FundingSection />
       <CTASection />
