@@ -21,7 +21,7 @@ const roadmapPhases = [
       "Automate the Taste Labs pipeline so every new voice gets production, marketing, and data support.",
       "Expand the audience internationally while partnering with boutique advertisers and sponsors.",
     ],
-    highlight: "Scale with discipline",
+    highlight: "Scale",
   },
   {
     id: "03",
@@ -33,37 +33,37 @@ const roadmapPhases = [
       "Launch creator incubators in Chicago, London, and Lagos to seed new voices.",
       "Turn Taste Originals into multiplatform IP (live, merch, podcasts, shorts).",
     ],
-    highlight: "Franchise-ready",
+    highlight: "Franchise",
   },
 ];
 
 const roadmapSignals = [
-  { label: "Creator pipeline", value: "20+ creators", detail: "Already vetted and sharing ownership." },
-  { label: "Target runway", value: "36 months", detail: "Fully funded through global expansion." },
-  { label: "Revenue visibility", value: "$12M+", detail: "Recurring cash by Year 3 with subscription + licensing." },
+  { label: "Creator pipeline", value: "20+", detail: "Already vetted creators sharing ownership." },
+  { label: "Target runway", value: "36mo", detail: "Fully funded through global expansion." },
+  { label: "Revenue visibility", value: "$12M+", detail: "Recurring by Year 3." },
 ];
 
 export const RoadmapSection = () => {
   return (
-    <section className="relative py-24 md:py-32 px-6 bg-black overflow-hidden">
+    <section className="relative py-12 md:py-24 lg:py-32 px-4 md:px-6 bg-black overflow-hidden">
 
-      <div className="relative z-10 max-w-6xl mx-auto space-y-16">
-        <div className="text-center space-y-6">
-          <p className="text-xs uppercase tracking-[0.6em] text-white/60">EXECUTION TIMELINE</p>
-          <h2 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tight">
+      <div className="relative z-10 max-w-6xl mx-auto space-y-8 md:space-y-16">
+        <div className="text-center space-y-4 md:space-y-6">
+          <p className="text-[0.6rem] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.6em] text-white/60">EXECUTION TIMELINE</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight">
             ROADMAP
           </h2>
-          <p className="text-lg text-white/70 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-white/70 max-w-3xl mx-auto px-2">
             The Taste roadmap is engineered for creator success, operational precision, and investor-grade scale.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 text-[0.55rem] uppercase tracking-[0.4em] text-white/70">
-            <span className="rounded-full border border-white/20 px-4 py-1 bg-white/5">Creator first</span>
-            <span className="rounded-full border border-white/20 px-4 py-1 bg-white/5">Capital efficient</span>
-            <span className="rounded-full border border-white/20 px-4 py-1 bg-white/5">Data-led insights</span>
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-[0.5rem] md:text-[0.55rem] uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/70">
+            <span className="rounded-full border border-white/20 px-3 md:px-4 py-1 bg-white/5">Creator first</span>
+            <span className="rounded-full border border-white/20 px-3 md:px-4 py-1 bg-white/5">Capital efficient</span>
+            <span className="rounded-full border border-white/20 px-3 md:px-4 py-1 bg-white/5">Data-led</span>
           </div>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[0.3fr,0.7fr] items-start">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-[0.3fr,0.7fr] items-start">
           <div className="hidden lg:block relative pl-6">
             <div className="absolute left-6 top-6 bottom-6 w-px bg-gradient-to-b from-primary to-transparent" />
             <div className="space-y-12">
@@ -86,24 +86,29 @@ export const RoadmapSection = () => {
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-8">
             {roadmapPhases.map((phase) => (
               <div
                 key={phase.id}
-                className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-black/70 via-black/60 to-slate-900 p-8 shadow-[0_35px_110px_rgba(0,0,0,0.65)]"
+                className="rounded-xl md:rounded-[2rem] border border-white/10 bg-gradient-to-br from-black/70 via-black/60 to-slate-900 p-4 md:p-8 shadow-[0_35px_110px_rgba(0,0,0,0.65)]"
               >
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.4em] text-white/60">{phase.timeframe}</p>
-                    <h3 className="text-3xl font-black text-white">{phase.title}</h3>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 md:gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="lg:hidden w-10 h-10 rounded-full border-2 border-primary/70 bg-gradient-to-br from-primary/60 to-orange-600 flex items-center justify-center text-white font-black text-xs flex-shrink-0">
+                      {phase.id}
+                    </div>
+                    <div>
+                      <p className="text-[0.6rem] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/60">{phase.timeframe}</p>
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white">{phase.title}</h3>
+                    </div>
                   </div>
-                  <span className="text-xs uppercase tracking-[0.5em] rounded-full border border-white/20 px-4 py-1 bg-white/5 text-white/80">{phase.highlight}</span>
+                  <span className="text-[0.6rem] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.5em] rounded-full border border-white/20 px-3 md:px-4 py-1 bg-white/5 text-white/80 self-start sm:self-auto whitespace-nowrap">{phase.highlight}</span>
                 </div>
-                <p className="mt-6 text-white/70 text-base">{phase.summary}</p>
-                <div className="mt-6 grid gap-3 text-sm text-white/80">
+                <p className="mt-4 md:mt-6 text-white/70 text-sm md:text-base">{phase.summary}</p>
+                <div className="mt-4 md:mt-6 grid gap-2 md:gap-3 text-xs md:text-sm text-white/80">
                   {phase.bullets.map((bullet) => (
-                    <p key={bullet} className="flex items-start gap-3">
-                      <span className="text-lg">•</span>
+                    <p key={bullet} className="flex items-start gap-2 md:gap-3">
+                      <span className="text-primary text-base md:text-lg flex-shrink-0">•</span>
                       <span>{bullet}</span>
                     </p>
                   ))}
@@ -113,20 +118,20 @@ export const RoadmapSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-3 md:gap-6">
           {roadmapSignals.map((signal) => (
-            <div key={signal.label} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-              <p className="text-xs uppercase tracking-[0.45em] text-white/60">{signal.label}</p>
-              <p className="text-3xl font-black text-white mt-3">{signal.value}</p>
-              <p className="text-sm text-white/70 mt-1">{signal.detail}</p>
+            <div key={signal.label} className="rounded-xl md:rounded-2xl border border-white/10 bg-white/5 p-3 md:p-6 text-center shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+              <p className="text-[0.5rem] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.45em] text-white/60">{signal.label}</p>
+              <p className="text-lg sm:text-xl md:text-3xl font-black text-white mt-1 md:mt-3">{signal.value}</p>
+              <p className="text-[0.6rem] md:text-sm text-white/70 mt-1 hidden sm:block">{signal.detail}</p>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <span className="text-xs uppercase tracking-[0.5em] text-white/60">Milestones unlocked with Taste Discipline™</span>
-          <span className="rounded-full border border-white/20 px-4 py-1 text-xs uppercase tracking-[0.4em] text-white/80 bg-white/5">
-            Investor-ready progress
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+          <span className="text-[0.5rem] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.5em] text-white/60 text-center">Milestones unlocked with Taste Discipline</span>
+          <span className="rounded-full border border-white/20 px-3 md:px-4 py-1 text-[0.5rem] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/80 bg-white/5">
+            Investor-ready
           </span>
         </div>
       </div>
