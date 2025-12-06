@@ -1,3 +1,5 @@
+import { FinancialDetail } from "@/components/ui/financial-detail";
+
 export const EquitySection = () => {
   return (
     <section className="py-12 md:py-24 px-4 md:px-6 bg-black">
@@ -17,9 +19,21 @@ export const EquitySection = () => {
             <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-white mb-3 md:mb-4 uppercase">
               TRADITIONAL STREAMER
             </h3>
-            <div className="flex items-baseline gap-2 md:gap-4 mb-3 md:mb-4">
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-600">~5%</span>
-            </div>
+            <FinancialDetail
+              title="Traditional Deal Structure"
+              position="bottom"
+              details={[
+                { label: "Upfront Payment", value: "$50K-150K", subtext: "Per episode writer fee" },
+                { label: "Backend Points", value: "2-5%", subtext: "Net profits participation" },
+                { label: "IP Ownership", value: "0%", subtext: "Studio retains all rights" },
+                { label: "Rerun Residuals", value: "Minimal", subtext: "Capped after 13 airings" },
+                { label: "Creative Control", value: "Limited", subtext: "Subject to network notes" },
+              ]}
+            >
+              <div className="flex items-baseline gap-2 md:gap-4 mb-3 md:mb-4">
+                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-600">~5%</span>
+              </div>
+            </FinancialDetail>
             <p className="text-gray-400 text-sm md:text-lg">
               Writers get minimal back-end ownership.
             </p>
@@ -29,9 +43,22 @@ export const EquitySection = () => {
             <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-white mb-3 md:mb-4 uppercase">
               THE TASTE MODEL
             </h3>
-            <div className="flex items-baseline gap-2 md:gap-4 mb-3 md:mb-4">
-              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white">40%+</span>
-            </div>
+            <FinancialDetail
+              title="Taste Deal Structure"
+              position="bottom"
+              details={[
+                { label: "Upfront Payment", value: "$75K-200K", subtext: "Competitive writer fees" },
+                { label: "Backend Points", value: "40%+", subtext: "Gross revenue participation" },
+                { label: "IP Co-Ownership", value: "Yes", subtext: "Shared IP rights from day one" },
+                { label: "Streaming Residuals", value: "Perpetual", subtext: "Revenue share continues forever" },
+                { label: "Creative Control", value: "Full", subtext: "Creator-driven development" },
+                { label: "Licensing Revenue", value: "40%", subtext: "Share of all licensing deals" },
+              ]}
+            >
+              <div className="flex items-baseline gap-2 md:gap-4 mb-3 md:mb-4">
+                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white">40%+</span>
+              </div>
+            </FinancialDetail>
             <p className="text-white text-sm md:text-lg font-medium">
               We offer substantial participation and creative control.
             </p>
