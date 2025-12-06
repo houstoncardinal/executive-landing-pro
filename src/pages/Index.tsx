@@ -12,26 +12,30 @@ import { RevenueSection } from "@/components/RevenueSection";
 import { FundingSection } from "@/components/FundingSection";
 import { CTASection } from "@/components/CTASection";
 import { ScrollProgressBar } from "@/components/ui/scroll-progress";
+import { VerticalNavigation } from "@/components/VerticalNavigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection />
-      <VisionarySection />
-      <CulturalMomentSection />
-      <TeamSection />
-      <ModelSection />
-      <BusinessModelSection />
-      <MarketPositioningSection />
-      <RoadmapSection />
-      <EquitySection />
-      <ProductionSection />
-      <RevenueSection />
-      <FundingSection />
-      <CTASection />
+      <section id="hero"><HeroSection /></section>
+      <section id="visionary"><VisionarySection /></section>
+      <section id="cultural"><CulturalMomentSection /></section>
+      <section id="team"><TeamSection /></section>
+      <section id="model"><ModelSection /></section>
+      <section id="business"><BusinessModelSection /></section>
+      <section id="market"><MarketPositioningSection /></section>
+      <section id="roadmap"><RoadmapSection /></section>
+      <section id="equity"><EquitySection /></section>
+      <section id="production"><ProductionSection /></section>
+      <section id="revenue"><RevenueSection /></section>
+      <section id="funding"><FundingSection /></section>
+      <section id="cta"><CTASection /></section>
 
       {/* Global scroll progress indicator */}
       <ScrollProgressBar />
+      
+      {/* Vertical slide navigation */}
+      <VerticalNavigation />
     </div>
   );
 };
