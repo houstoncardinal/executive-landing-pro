@@ -60,15 +60,15 @@ export const VerticalNavigation = () => {
 
   return (
     <div 
-      className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center"
+      className="fixed right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Current section indicator */}
+      {/* Current section indicator - hidden on mobile */}
       <motion.div 
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="absolute right-full mr-4 top-1/2 -translate-y-1/2 pointer-events-none"
+        className="absolute right-full mr-4 top-1/2 -translate-y-1/2 pointer-events-none hidden md:block"
       >
         <motion.div
           key={activeSection}
@@ -83,16 +83,16 @@ export const VerticalNavigation = () => {
       </motion.div>
 
       {/* Navigation container */}
-      <div className="relative flex flex-col items-center gap-1 p-3 rounded-full bg-background/80 backdrop-blur-xl border border-border/30 shadow-2xl">
+      <div className="relative flex flex-col items-center gap-0.5 sm:gap-1 p-2 sm:p-3 rounded-full bg-background/80 backdrop-blur-xl border border-border/30 shadow-2xl">
         {/* Up arrow */}
         <button
           onClick={goToPrev}
           disabled={activeSection === 0}
-          className="w-8 h-8 flex items-center justify-center rounded-full mb-2 transition-all duration-300 disabled:opacity-20 hover:bg-primary/10 group"
+          className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full mb-1 sm:mb-2 transition-all duration-300 disabled:opacity-20 hover:bg-primary/10 group"
           aria-label="Previous section"
         >
           <svg 
-            className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" 
+            className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground group-hover:text-primary transition-colors" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
@@ -104,19 +104,19 @@ export const VerticalNavigation = () => {
         {/* Progress track */}
         <div className="relative">
           {/* Background track */}
-          <div className="w-[2px] bg-border/50 rounded-full" style={{ height: `${(sections.length - 1) * 24 + 8}px` }} />
+          <div className="w-[2px] bg-border/50 rounded-full" style={{ height: `${(sections.length - 1) * 16 + 8}px` }} />
           
           {/* Active progress */}
           <motion.div 
             className="absolute top-0 left-0 w-[2px] bg-gradient-to-b from-primary via-primary to-primary/50 rounded-full"
-            style={{ height: `${(sections.length - 1) * 24 + 8}px` }}
+            style={{ height: `${(sections.length - 1) * 16 + 8}px` }}
             initial={{ scaleY: 0 }}
             animate={{ scaleY: (activeSection + 1) / sections.length }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
           />
 
           {/* Dots */}
-          <div className="absolute top-1 left-1/2 -translate-x-1/2 flex flex-col gap-4">
+          <div className="absolute top-1 left-1/2 -translate-x-1/2 flex flex-col gap-2 sm:gap-3">
             {sections.map((section, index) => (
               <button
                 key={section.id}
@@ -124,21 +124,21 @@ export const VerticalNavigation = () => {
                 className="group relative flex items-center justify-center"
                 aria-label={`Go to ${section.label}`}
               >
-                {/* Hover label */}
+                {/* Hover label - hidden on mobile */}
                 <motion.span
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : 10 }}
                   transition={{ delay: index * 0.02 }}
-                  className="absolute right-full mr-4 text-xs font-medium tracking-wide text-muted-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute right-full mr-4 text-xs font-medium tracking-wide text-muted-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block"
                 >
                   {String(index + 1).padStart(2, '0')}
                 </motion.span>
 
                 {/* Dot */}
                 <motion.div
-                  className={`relative w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`relative w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                     index === activeSection 
-                      ? 'bg-primary shadow-[0_0_12px_rgba(244,85,37,0.6)]' 
+                      ? 'bg-primary shadow-[0_0_8px_rgba(244,85,37,0.6)] sm:shadow-[0_0_12px_rgba(244,85,37,0.6)]' 
                       : index < activeSection 
                         ? 'bg-primary/60' 
                         : 'bg-border hover:bg-muted-foreground/50'
@@ -165,11 +165,11 @@ export const VerticalNavigation = () => {
         <button
           onClick={goToNext}
           disabled={activeSection === sections.length - 1}
-          className="w-8 h-8 flex items-center justify-center rounded-full mt-2 transition-all duration-300 disabled:opacity-20 hover:bg-primary/10 group"
+          className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full mt-1 sm:mt-2 transition-all duration-300 disabled:opacity-20 hover:bg-primary/10 group"
           aria-label="Next section"
         >
           <svg 
-            className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" 
+            className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground group-hover:text-primary transition-colors" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
@@ -178,13 +178,13 @@ export const VerticalNavigation = () => {
           </svg>
         </button>
 
-        {/* Section counter */}
-        <div className="mt-2 pt-2 border-t border-border/30 text-center">
-          <span className="text-xs font-mono text-primary font-semibold">
+        {/* Section counter - compact on mobile */}
+        <div className="mt-1 sm:mt-2 pt-1 sm:pt-2 border-t border-border/30 text-center">
+          <span className="text-[10px] sm:text-xs font-mono text-primary font-semibold">
             {String(activeSection + 1).padStart(2, '0')}
           </span>
-          <span className="text-xs font-mono text-muted-foreground/50">/</span>
-          <span className="text-xs font-mono text-muted-foreground/50">
+          <span className="text-[10px] sm:text-xs font-mono text-muted-foreground/50">/</span>
+          <span className="text-[10px] sm:text-xs font-mono text-muted-foreground/50">
             {String(sections.length).padStart(2, '0')}
           </span>
         </div>
